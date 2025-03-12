@@ -16,7 +16,7 @@ import concurrent.futures
 # ------------------------------------------------------------
 #  API CONFIGURATION (REMOVED FOR SECURITY - ADD YOUR OWN)
 # ------------------------------------------------------------
-AZURE_API_URL = "YOUR_API_URL_HERE"
+API_URL = "YOUR_API_URL_HERE"
 API_CODE = "YOUR_API_KEY_HERE"
 
 # ------------------------------------------------------------
@@ -32,7 +32,7 @@ def load_stock_data(stock_name, start_date, end_date, retries=1):
     }
     for attempt in range(retries + 1):
         try:
-            response = requests.get(AZURE_API_URL, params=params)
+            response = requests.get(API_URL, params=params)
             if response.status_code == 200:
                 data = response.json()
                 if isinstance(data, list) and len(data) > 0:
