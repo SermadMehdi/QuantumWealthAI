@@ -64,7 +64,7 @@ Traditional investment strategies often fail under dynamic market conditions. Qu
 3. Add your API credentials:
    - Create a `.env` file:
      ```
-     AZURE_API_URL=your_api_url
+     API_URL=your_api_url
      API_CODE=your_api_key
      ```
 
